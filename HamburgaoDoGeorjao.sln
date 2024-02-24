@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HamburgaoDoGeorjao.Mvc", "HamburgaoDoGeorjao\HamburgaoDoGeorjao.Mvc.csproj", "{6816DCA2-EF85-4AFF-A6C8-914DEB2D591B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Apresentação", "1-Apresentação", "{460C1D5F-49CB-40FD-BBFE-06D38A7E80D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Negocio", "2-Negocio", "{0453E63F-0EFF-45B3-B7B2-FCFB5060E487}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Infra", "3-Infra", "{D4AEF4D6-30A8-4B71-B673-CEC17B1338D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Testes", "4-Testes", "{7A30F855-922D-4C3B-9A5E-CA5B6EB668F0}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegraDeNegocios", "RegraDeNegocios\RegraDeNegocios.csproj", "{E4835C86-D123-4C13-AE09-3E2280A1A181}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HamburgaoDoGeorjao.DAO", "HamburgaoDoGeorjao.DAO\HamburgaoDoGeorjao.DAO.csproj", "{C91C96D1-96B1-4C89-B37B-6B6648D3B812}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6816DCA2-EF85-4AFF-A6C8-914DEB2D591B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6816DCA2-EF85-4AFF-A6C8-914DEB2D591B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6816DCA2-EF85-4AFF-A6C8-914DEB2D591B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6816DCA2-EF85-4AFF-A6C8-914DEB2D591B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4835C86-D123-4C13-AE09-3E2280A1A181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4835C86-D123-4C13-AE09-3E2280A1A181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4835C86-D123-4C13-AE09-3E2280A1A181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4835C86-D123-4C13-AE09-3E2280A1A181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C91C96D1-96B1-4C89-B37B-6B6648D3B812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91C96D1-96B1-4C89-B37B-6B6648D3B812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91C96D1-96B1-4C89-B37B-6B6648D3B812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91C96D1-96B1-4C89-B37B-6B6648D3B812}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6816DCA2-EF85-4AFF-A6C8-914DEB2D591B} = {460C1D5F-49CB-40FD-BBFE-06D38A7E80D0}
+		{E4835C86-D123-4C13-AE09-3E2280A1A181} = {0453E63F-0EFF-45B3-B7B2-FCFB5060E487}
+		{C91C96D1-96B1-4C89-B37B-6B6648D3B812} = {D4AEF4D6-30A8-4B71-B673-CEC17B1338D9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C982201-E1A5-4591-B449-2A2AAEF803E8}
+	EndGlobalSection
+EndGlobal
