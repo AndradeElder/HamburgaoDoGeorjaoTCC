@@ -28,4 +28,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.12" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HamburgaoDoGeorjao.DAO\HamburgaoDoGeorjao.DAO.csproj" />
+    <ProjectReference Include="..\RegraDeNegocios\RegraDeNegocios.csproj" />
+  </ItemGroup>
+
 </Project>
