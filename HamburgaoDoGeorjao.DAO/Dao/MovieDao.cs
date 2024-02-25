@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using RegraDeNegocios.Entidades;
+using HamburgaoDoGeorjao.DAO.ValueObjects;
 
 
 namespace HamburgaoDoGeorjao.DAO.Dao
@@ -19,13 +19,14 @@ namespace HamburgaoDoGeorjao.DAO.Dao
             _connectionString = connectionString;
         }
 
-        public void AddMovie(Movie movie)
+        public void AddMovie(MovieVo movie)
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand("INSERT INTO Movie (Title, ReleaseDate, Genre, Price) VALUES (@Title, @ReleaseDate, @Genre, @Price)", conn))
                 {
+                    cmd.Parameters.AddWithValue("@Id", movie.Id);
                     cmd.Parameters.AddWithValue("@Title", movie.Title);
                     cmd.Parameters.AddWithValue("@ReleaseDate", movie.ReleaseDate);
                     cmd.Parameters.AddWithValue("@Genre", movie.Genre);
@@ -36,9 +37,9 @@ namespace HamburgaoDoGeorjao.DAO.Dao
             }
         }
 
-        public List<Movie> GetAllMovies()
+        public List<MovieVo> GetAllMovies()
         {
-            List<Movie> movies = new List<Movie>();
+            List<MovieVo> movies = new List<MovieVo>();
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
@@ -49,7 +50,7 @@ namespace HamburgaoDoGeorjao.DAO.Dao
                     {
                         while (reader.Read())
                         {
-                            movies.Add(new Movie
+                            movies.Add(new MovieVo
                             {
                                 Id = Convert.ToInt32(reader["Id"]),
                                 Title = reader["Title"].ToString(),
