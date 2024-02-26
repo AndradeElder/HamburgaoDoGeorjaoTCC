@@ -14,4 +14,8 @@
     <ProjectReference Include="..\HamburgaoDoGeorjao.DAO\HamburgaoDoGeorjao.DAO.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Serviços\" />
+  </ItemGroup>
+
 </Project>

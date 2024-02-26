@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HamburgaoDoGeorjao.DAO.ValueObjects
 {
-    internal class PedidoVo
+    public class PedidoVo
     {
         public PedidoVo()
         {

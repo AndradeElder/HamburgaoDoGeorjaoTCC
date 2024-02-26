@@ -20,11 +20,11 @@ namespace RegraDeNegocios.Entidades
         public string SinfoniaDeCogumelos { get; set; }
         public string FrangoFantastico { get; set; }
 
-        public HamburguerVo ToVo()
+        public HamburguerVo ToHamburguerVo()
         {
             return new HamburguerVo
             {
-                Id = Id,
+            
                 TipoDePao = TipoDePao,
                 Valor = Valor,
                 BurgerBliss = BurgerBliss,
