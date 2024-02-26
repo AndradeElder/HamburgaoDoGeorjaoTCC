@@ -19,7 +19,7 @@ namespace HamburgaoDoGeorjao.DAO.Dao
             _connectionString = connectionString;
         }
 
-        public void AddMovie(EnderecoVo endereco)
+        public void AddEndereco(EnderecoVo endereco)
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
@@ -27,47 +27,43 @@ namespace HamburgaoDoGeorjao.DAO.Dao
                 using (SqlCommand cmd = new SqlCommand("INSERT INTO Endereco (Rua, Bairro, Numero, Complemento) VALUES (@Rua, @Bairro, @Numero, @Complemento)", conn))
                 {
                     cmd.Parameters.AddWithValue("@Id", endereco.Id);
-                    cmd.Parameters.AddWithValue("@Title", endereco.Rua);
-                    cmd.Parameters.AddWithValue("@ReleaseDate", endereco.Bairro);
-                    cmd.Parameters.AddWithValue("@Genre", endereco.Numero);
-                    cmd.Parameters.AddWithValue("@Price", endereco.Complemento);
+                    cmd.Parameters.AddWithValue("@Rua", endereco.Rua);
+                    cmd.Parameters.AddWithValue("@Bairro", endereco.Bairro);
+                    cmd.Parameters.AddWithValue("@Numero", endereco.Numero);
+                    cmd.Parameters.AddWithValue("@Complemento", endereco.Complemento);
 
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public List<EnderecoVo> GetAllMovies()
+        public List<EnderecoVo> GetAllEndereco()
         {
             List<EnderecoVo> endereco = new List<EnderecoVo>();
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Movie", conn))
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Endereco", conn))
                 {
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
-                        {
-                            // alterar para as tabelas originais
-                            // alterar para as tabelas originais
-                            // alterar para as tabelas originais
-                            // alterar para as tabelas originais
+                        {            
                             endereco.Add(new EnderecoVo
                             {
                                 Id = Convert.ToInt32(reader["Id"]),
-                                Title = reader["Title"].ToString(),
-                                ReleaseDate = Convert.ToDateTime(reader["ReleaseDate"]),
-                                Genre = reader["Genre"].ToString(),
-                                Price = Convert.ToDecimal(reader["Price"])
+                                Rua = reader["Rua"].ToString(),
+                                Bairro = reader["Bairro"].ToString(),
+                                Numero = Convert.ToInt32(reader["Numero"]),
+                                Complemento = reader["Complemento"].ToString()
                             });
                         }
                     }
                 }
             }
 
-            return movies;
+            return endereco;
         }
     }
 }

@@ -19,59 +19,63 @@ namespace HamburgaoDoGeorjao.DAO.Dao
             _connectionString = connectionString;
         }
 
-        public void AddMovie(ClienteVo endereco)
+        public void AddCliente(ClienteVo cliente)
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO Endereco (Rua, Bairro, Numero, Complemento) VALUES (@Rua, @Bairro, @Numero, @Complemento)", conn))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Cliente (Nome, CPF, Email, Numero) VALUES (@Nome, @CPF, @Email, @Numero)", conn))
                 {
-                    // alterar para as tabelas originais
-                    // alterar para as tabelas originais
-                    // alterar para as tabelas originais
-                    // alterar para as tabelas originais
-                    cmd.Parameters.AddWithValue("@Id", endereco.Id);
-                    cmd.Parameters.AddWithValue("@Title", endereco.Rua);
-                    cmd.Parameters.AddWithValue("@ReleaseDate", endereco.Bairro);
-                    cmd.Parameters.AddWithValue("@Genre", endereco.Numero);
-                    cmd.Parameters.AddWithValue("@Price", endereco.Complemento);
+
+                    // alterar para a coluna Endereco puxar a tabela endereco.... ---- implementar ----
+                    // alterar para a coluna Endereco puxar a tabela endereco.... ---- implementar ----
+                    // alterar para a coluna Endereco puxar a tabela endereco.... ---- implementar ----
+
+                    cmd.Parameters.AddWithValue("@Id", cliente.Id);
+                    cmd.Parameters.AddWithValue("@UserId", cliente.UserId);
+                    cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
+                    cmd.Parameters.AddWithValue("@CPF", cliente.CPF);
+                    cmd.Parameters.AddWithValue("@Email", cliente.Email);
+                    cmd.Parameters.AddWithValue("@Senha", cliente.Senha);
 
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public List<ClienteVo> GetAllMovies()
+        public List<ClienteVo> GetAllClientes()
         {
             List<ClienteVo> clientes = new List<ClienteVo>();
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Movie", conn))
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Cliente", conn))
                 {
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            // alterar para as tabelas originais
-                            // alterar para as tabelas originais
-                            // alterar para as tabelas originais
-                            // alterar para as tabelas originais
                             clientes.Add(new ClienteVo
                             {
                                 Id = Convert.ToInt32(reader["Id"]),
-                                Title = reader["Title"].ToString(),
-                                ReleaseDate = Convert.ToDateTime(reader["ReleaseDate"]),
-                                Genre = reader["Genre"].ToString(),
-                                Price = Convert.ToDecimal(reader["Price"])
+
+                                //conferir o UserID
+                                //conferir o UserID
+                                //conferir o UserID
+
+                                UserId = reader["UserId"],
+                                Nome = reader["Nome"].ToString(),
+                                CPF = Convert.ToInt32(reader["CPF"]),
+                                Email = reader["Email"].ToString(),
+                                Senha = reader["Senha"].ToString()
                             });
                         }
                     }
                 }
             }
 
-            return movies;
+            return clientes;
         }
     }
 }

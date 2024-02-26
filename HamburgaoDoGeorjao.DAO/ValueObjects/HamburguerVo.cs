@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HamburgaoDoGeorjao.DAO.ValueObjects
 {
-    public class HamburguerVo
+    public class HamburguerVo : EntidadeBaseVo
     {
         public IngredientesVo Ingredientes { get; set; }
         public string TipoDePao { get; set; }
