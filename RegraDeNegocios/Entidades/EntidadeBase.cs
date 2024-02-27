@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RegrasDeNegocios.Entidades
+namespace RegraDeNegocios.Entidades
 {
     public abstract class EntidadeBase
     {
