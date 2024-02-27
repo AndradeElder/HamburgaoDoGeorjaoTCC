@@ -31,7 +31,7 @@ namespace RegraDeNegocios.Serviços;
 
     public Pedido Adicionar(Pedido pedido)
     {
-        var pedidoClienteVo = _pedidoClienteDao.CriarRegistro(pedido.ToPedidoClienteVo());
+        var pedidoClienteVo = _pedidoClienteDao.CriarRegistro(pedido.ToVo());
         pedido.Id = pedidoClienteVo;
 
         foreach (var hamburguer in pedido.Hamburguers)

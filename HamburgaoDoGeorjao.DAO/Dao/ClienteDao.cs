@@ -64,7 +64,7 @@ namespace HamburgaoDoGeorjao.DAO.Dao
                                 //conferir o UserID
                                 //conferir o UserID
 
-                                UserId = reader["UserId"],
+                                UserId = (Guid)reader["UserId"],
                                 Nome = reader["Nome"].ToString(),
                                 CPF = Convert.ToInt32(reader["CPF"]),
                                 Email = reader["Email"].ToString(),
