@@ -1,5 +1,5 @@
 ﻿using HamburgaoDoGeorjao.DAO.ValueObjects;
-using RegrasDeNegocios.Entidades;
+using RegraDeNegocios.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
