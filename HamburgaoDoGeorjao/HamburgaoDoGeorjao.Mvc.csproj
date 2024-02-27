@@ -33,8 +33,4 @@
     <ProjectReference Include="..\RegraDeNegocios\RegraDeNegocios.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Register\" />
-  </ItemGroup>
-
 </Project>
