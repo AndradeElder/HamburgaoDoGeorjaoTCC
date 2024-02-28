@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace HamburgaoDoGeorjao.DAO.Regras
 {
-    public interface ICarrinhoDeComprasDao : IDao<CarrinhoDeComprasVo>
+    public interface ICarrinhoDeComprasDao : IRepository<CarrinhoDeComprasVo>
     {
+
     }
 }

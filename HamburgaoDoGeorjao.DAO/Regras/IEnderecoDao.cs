@@ -7,7 +7,8 @@ using HamburgaoDoGeorjao.DAO.ValueObjects;
 
 namespace HamburgaoDoGeorjao.DAO.Regras
 {
-    public interface IEnderecoDao : IDao<EnderecoVo>
+    public interface IEnderecoDao : IRepository<EnderecoVo>
     {
+
     }
 }

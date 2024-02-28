@@ -8,6 +8,8 @@ namespace HamburgaoDoGeorjao.DAO.ValueObjects
 {
     public class IngredientesVo : EntidadeBaseVo
     {
+        public int HamburguerId { get; set; }
+        public virtual HamburguerVo Hamburguer { get; set; }
         public string Pao { get; set; }
 
         public string Carne { get; set; }
@@ -29,5 +31,6 @@ namespace HamburgaoDoGeorjao.DAO.ValueObjects
         public string Picles { get; set; }
 
         public string QueijoCheddar { get; set; }
+
     }
 }

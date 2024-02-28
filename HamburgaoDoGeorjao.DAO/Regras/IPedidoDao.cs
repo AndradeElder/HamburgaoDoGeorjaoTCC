@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace HamburgaoDoGeorjao.DAO.Regras
 {
-    public interface IPedidoDao : IDao<PedidoVo>
+    public interface IPedidoDao : IRepository<PedidoVo>
     {
+
     }
 }

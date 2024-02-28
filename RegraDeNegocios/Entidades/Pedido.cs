@@ -24,7 +24,7 @@ namespace RegraDeNegocios.Entidades
 
         public PedidoVo ToVo()
         {
-            return new PedidoVo() {PedidoClienteId = Cliente.Id, Id = this.Id};
+            return new PedidoVo() {Descricao = Descricao, DataSolicitacao = DataSolicitacao, DataPreparacao = DataPreparacao, DataSaidaEntrega = DataSaidaEntrega, DataFinalizacaoEntrega = DataFinalizacaoEntrega};
         }
     }
 }

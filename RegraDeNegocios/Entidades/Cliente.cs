@@ -19,7 +19,7 @@ namespace RegraDeNegocios.Entidades
 
         public ClienteVo ToVo()
         {
-            return new ClienteVo { Id = Id, Endereco = Endereco, UserId = UserId, Nome = Nome, CPF = CPF, Email = Email, Senha = Senha };
+            return new ClienteVo { Id = Id, UserId = UserId, Nome = Nome, CPF = CPF, Email = Email, Senha = Senha };
         }
     }
 }

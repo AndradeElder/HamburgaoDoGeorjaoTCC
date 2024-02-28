@@ -8,10 +8,16 @@ namespace HamburgaoDoGeorjao.DAO.ValueObjects
 {
     public class CarrinhoDeComprasVo : EntidadeBaseVo
     {
-        public ClienteVo Cliente { get; set; }
+        public virtual ClienteVo Cliente { get; set; }
+        public int ClienteId { get; set; }
 
-        public PedidoVo Pedido { get; set; }
+        public virtual PedidoVo Pedido { get; set; }
+
+        public int PedidoId { get; set; }
 
         public int Quantidade { get; set; }
+
+        public double ValorTotal { get; set; }
+
     }
 }

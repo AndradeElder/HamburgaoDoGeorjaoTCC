@@ -16,9 +16,11 @@ namespace RegraDeNegocios.Entidades
 
         public int Quantidade { get; set; }
 
+        public double ValorTotal { get; set; }
+
         public CarrinhoDeComprasVo ToVo()
         {
-            return new CarrinhoDeComprasVo { Id = Id, Cliente = Cliente, Pedido = Pedido, Quantidade = Quantidade};
+            return new CarrinhoDeComprasVo { Id = Id, Quantidade = Quantidade};
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RegraDeNegocios.Entidades
 {
-    public class Ingredientes
+    public class Ingredientes : EntidadeBase
     {
         public string Pao { get; set; }
 

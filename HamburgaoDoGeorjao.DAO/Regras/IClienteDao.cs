@@ -7,7 +7,8 @@ using HamburgaoDoGeorjao.DAO.ValueObjects;
 
 namespace HamburgaoDoGeorjao.DAO.Regras
 {
-    public interface IClienteDao : IDao<ClienteVo>
+    public interface IClienteDao : IRepository<ClienteVo>
     {
+
     }
 }
