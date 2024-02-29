@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Serviços\" />
+    <Folder Include="Servicos\" />
   </ItemGroup>
 
 </Project>
