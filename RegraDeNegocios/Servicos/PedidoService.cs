@@ -38,7 +38,7 @@ namespace RegraDeNegocios.Serviços;
         {
             var pedidoVo = new PedidoVo()
             {
-                PedidoClienteId = pedido.Cliente.Id,
+                ClienteId = pedido.Cliente.Id,
                 HamburguerId = hamburguer.Id,
             };
             pedidoVo.Id = _pedidoDao.CriarRegistro(pedidoVo);

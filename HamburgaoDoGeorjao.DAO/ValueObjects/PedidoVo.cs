@@ -27,6 +27,8 @@ namespace HamburgaoDoGeorjao.DAO.ValueObjects
         public DateTime? DataSaidaEntrega { get; set; }
         public DateTime? DataFinalizacaoEntrega { get; set; }
 
-        public virtual HamburguerVo Hamburguers { get; set; }
+        public virtual ICollection<HamburguerVo> Hamburguers { get; set; }
+
+        public ICollection<PedidoHamburguerVo> PedidoHamburguers { get; set; }
     }
 }

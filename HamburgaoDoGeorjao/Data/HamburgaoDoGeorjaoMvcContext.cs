@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using HamburgaoDoGeorjao.Mvc.Models;
 using RegraDeNegocios.Entidades;
+using HamburgaoDoGeorjao.DAO.ValueObjects;
 
 namespace HamburgaoDoGeorjao.Mvc.Data
 {
@@ -25,5 +26,9 @@ namespace HamburgaoDoGeorjao.Mvc.Data
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<CarrinhoDeComprasVo> CarrinhoDeCompras { get; set; }
+        public DbSet<HamburguerVo> Hamburguers { get; set; }
+        public DbSet<IngredientesVo> Ingredientes { get; set; }
+        public DbSet<PedidoHamburguerVo> PedidoHamburguers { get; set; }
     }
 }

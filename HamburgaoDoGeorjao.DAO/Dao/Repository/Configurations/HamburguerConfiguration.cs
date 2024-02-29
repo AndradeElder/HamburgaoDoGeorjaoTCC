@@ -17,10 +17,7 @@ namespace HamburgaoDoGeorjao.DAO.Dao.Repository.Configurations
             builder.HasKey(x => x.Id);
 
             builder.HasMany(hamburguer => hamburguer.Pedido)
-                   .WithOne(pedido => pedido.Hamburguers)
-                   .HasForeignKey(pedido => pedido.Hamburguers)
-                   .OnDelete(DeleteBehavior.Cascade);
+                   .WithMany(pedido => pedido.Hamburguers)
         }
     }
 }
-

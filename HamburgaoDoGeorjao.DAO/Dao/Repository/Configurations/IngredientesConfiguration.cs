@@ -13,7 +13,7 @@ namespace HamburgaoDoGeorjao.DAO.Dao.Repository.Configurations
     {
         public void Configure(EntityTypeBuilder<IngredientesVo> builder)
         {
-            builder.ToTable("Hamburguer");
+            builder.ToTable("Ingredientes");
             builder.HasKey(x => x.Id);
 
             builder.HasOne(ingrediente => ingrediente.Hamburguer)

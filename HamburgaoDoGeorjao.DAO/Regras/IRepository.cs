@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -13,7 +14,22 @@ namespace HamburgaoDoGeorjao.DAO.Regras
         IQueryable<TEntity> Get(Expression<Func<TEntity, bool>> predicate);
         Task<TEntity> GetByIdAsync(int id);
         Task AddAsync(TEntity entity);
+
         void Update(TEntity entity);
         void Delete(TEntity entity);
+
+
+
     }
 }
+
+/*
+Task<TEntity> ObterRegistro(int ID);
+List<TEntity> ObterRegistros();
+List<TEntity> ObterRegistros(int ID);
+int CriarRegistro(TEntity objetoVo);
+
+Task AtualizarRegistro(TEntity objetoParaAtualizar);
+
+Task DeletarRegistro(int ID);
+*/
